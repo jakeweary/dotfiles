@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+export PATH="$PATH:~/.bin"
+
+export HISTSIZE=
+export HISTFILESIZE=
+export HISTCONTROL=ignoreboth
+
+export PS1='\[\e]0;\u@\h \w\a\]\n\[\e[34m\]\u@\h\[\e[0m\] \[\e[36m\]\w\[\e[0m\]\n\$ '
+export PROMPT_COMMAND='history -a'
+
+[ -n "$(type -t __git_ps1)" ] && {
+  export GIT_PS1_SHOWDIRTYSTATE=1
+  export GIT_PS1_SHOWSTASHSTATE=1
+  export GIT_PS1_SHOWUNTRACKEDFILES=1
+  export GIT_PS1_SHOWUNTRACKEDFILES=1
+  export GIT_PS1_SHOWUPSTREAM=auto
+  export GIT_PS1_SHOWCOLORHINTS=1
+  export PROMPT_COMMAND="$PROMPT_COMMAND;__git_ps1 '${PS1:0:-5}' '${PS1: -5}' ' %s'"
+}
+
+eval "$(dircolors ~/.gitmodules.d/nord-dircolors/src/dir_colors)"
+
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=1
+export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox:/mnt/d/Apps/VirtualBox"
+

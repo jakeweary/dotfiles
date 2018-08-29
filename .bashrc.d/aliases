@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+alias .='pwd'
+alias ..='cd ..'
+
+alias ls='ls --color=auto --group-directories-first'
+alias ll='ls -Alh'
+alias l='ls -A'
+
+alias grep='grep --color=auto'
+alias fgrep='grep -F'
+alias egrep='grep -E'
+
+alias ffmpeg='ffmpeg -hide_banner'
+alias ffplay='ffplay -hide_banner'
+alias ffprobe='ffprobe -hide_banner'

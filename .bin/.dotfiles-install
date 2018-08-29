@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+dotfiles() {
+  git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME "$@"
+}
+
+install() {
+  git clone --bare $1github.com$2thepheer/dotfiles.git ~/.dotfiles.git || return
+  pushd ~
+    mkdir -p .dotfiles.backup
+    mv $(dotfiles ls-tree --name-only HEAD) .dotfiles.backup 2>/dev/null
+    dotfiles config --local status.showUntrackedFiles no
+    dotfiles checkout
+    dotfiles submodule update --init --depth 1
+  popd
+}
+
+case $1 in
+  ssh) install git@     : ;;
+  *)   install https:// / ;;
+esac

@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+def esc(*colors):
+  return '\033[' + ';'.join(map(str, filter(None, colors))) + 'm'
+
+def unit(*colors):
+  print('{} ● {}'.format(esc(*colors), esc()), end='')
+
+def pair(*colors):
+  for mode in range(2):
+    unit(mode, *colors)
+
+def line(bg):
+  pair(bg)
+  for fg in range(30, 38):
+    pair(fg, bg)
+  print()
+
+def table():
+  line(0)
+  for bg in range(8):
+    for mode in (40, 100):
+      line(bg + mode)
+
+table()

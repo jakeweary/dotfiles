@@ -1,0 +1,17 @@
+[user]
+	name = <>
+	email = <>
+[push]
+	default = simple
+[pretty]
+	custom = %C(yellow)%h%C(reset) %s%C(auto)%d
+[alias]
+	dotfiles = !git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git
+	amend = commit --amend
+	amend-no-edit = commit --amend --no-edit
+	empty-commit = commit --allow-empty --allow-empty-message
+	log-custom = log --graph --pretty=custom
+	log-stat = log --graph --decorate --stat
+	log-diff = log --graph --decorate --patch
+	log-diff-words = log --graph --decorate --patch --color-words='\\w+|\\S'
+	diff-words = diff --color-words='\\w+|\\S'

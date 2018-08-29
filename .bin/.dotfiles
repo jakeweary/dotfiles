@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+git dotfiles commit --allow-empty-message -am ''
+git dotfiles pull -r

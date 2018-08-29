@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+youtube-dl --flat-playlist --dump-json "$1" "${@:3}" | jq .id | xargs -i -n 1 -P 8 \
+  youtube-dl -f bestaudio[ext=m4a] --no-progress --embed-thumbnail --add-metadata \
+    --metadata-from-title '(?:(?P<artist>.+?)\s+(?:'"${2:-[‐-—-]}"')\s+)?(?P<title>.+)' \
+    https://youtu.be/{}

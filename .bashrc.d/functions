@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+mkcd() { mkdir -p "$@" && cd "$@"; }
+cpcd() { cp "$@" && cd "${!#}"; }
+mvcd() { mv "$@" && cd "${!#}"; }
+cdls() { cd "$@" && ls; }

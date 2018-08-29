@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+pushd ~; rm -rf $(git dotfiles ls-tree --name-only HEAD); popd
+pushd ~/.dotfiles.backup; mv $(ls -Ab1) ~; popd
+rm -rf ~/.dotfiles.*

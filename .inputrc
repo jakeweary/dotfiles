@@ -1,0 +1,15 @@
+$include /etc/inputrc
+
+set completion-ignore-case on
+set show-all-if-ambiguous on
+set colored-stats on
+
+"\t":       menu-complete
+"\e[Z":     menu-complete-backward
+"\e[B":     history-search-forward
+"\e[A":     history-search-backward
+"\e[1;5C":  forward-word
+"\e[1;5D":  backward-word
+"\C-_":     backward-kill-word
+"\xC2\x9F": backward-kill-line
+"\e[2~":    paste-from-clipboard
