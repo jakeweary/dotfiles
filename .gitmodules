@@ -1,7 +1,3 @@
-[submodule "nord-dircolors"]
+[submodule ".gitmodules.d/nord-dircolors"]
 	path = .gitmodules.d/nord-dircolors
 	url = https://github.com/arcticicestudio/nord-dircolors.git
-
-[submodule "nord-sublime-text"]
-        path = .config/bat/themes/nord-sublime-text
-        url = https://github.com/arcticicestudio/nord-sublime-text.git
