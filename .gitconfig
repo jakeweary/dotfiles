@@ -13,7 +13,7 @@
 	amend = commit --amend
 	amend-no-edit = commit --amend --no-edit
 	empty-commit = commit --allow-empty --allow-empty-message
-	log-basic = log --pretty=basic
+	log-basic = log --graph --pretty=basic
 	log-extended = log --graph --pretty=extended
 	log-stat = log --graph --decorate --stat
 	log-diff = log --graph --decorate --patch
