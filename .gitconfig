@@ -1,17 +1,22 @@
 [user]
 	name = <>
 	email = <>
+[core]
+        # pager = less -+X
 [push]
 	default = simple
 [pretty]
-	custom = %C(yellow)%h%C(reset) %s%C(auto)%d
+	basic = %C(yellow)%h%C(reset) %s%C(auto)%d
+	extended = %C(yellow bold)%h%C(reset) %s %C(dim)%cr by %an%C(auto)%d
 [alias]
 	dotfiles = !git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git
 	amend = commit --amend
 	amend-no-edit = commit --amend --no-edit
 	empty-commit = commit --allow-empty --allow-empty-message
-	log-custom = log --graph --pretty=custom
+	log-basic = log --pretty=basic
+	log-extended = log --graph --pretty=extended
 	log-stat = log --graph --decorate --stat
 	log-diff = log --graph --decorate --patch
 	log-diff-words = log --graph --decorate --patch --color-words='\\w+|\\S'
 	diff-words = diff --color-words='\\w+|\\S'
+
