@@ -24,3 +24,4 @@ eval "$(dircolors ~/.gitmodules.d/nord-dircolors/src/dir_colors)"
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=1
 export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox:/mnt/d/Apps/VirtualBox"
 
+export BAT_THEME=Nord
