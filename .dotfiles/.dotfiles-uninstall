@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
-pushd ~; rm -rf $(git dotfiles ls-tree --name-only HEAD); popd
-pushd ~/.dotfiles.backup; mv $(ls -Ab1) ~; popd
-rm -rf ~/.dotfiles.*
+backup() {
+  git --git-dir=$HOME/.dotfiles.backup --work-tree=$HOME "$@"
+}
+
+dotfiles() {
+  git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME "$@"
+}
+
+pushd ~
+  rm -rf $(dotfiles ls-tree -r --name-only HEAD)
+  backup reset --hard
+  rm -rf .dotfiles.*
+popd

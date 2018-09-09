@@ -1,14 +1,26 @@
 #!/usr/bin/env bash
 
+backup() {
+  git --git-dir=$HOME/.dotfiles.backup --work-tree=$HOME "$@"
+}
+
 dotfiles() {
   git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME "$@"
 }
 
 install() {
   git clone --bare $1github.com$2thepheer/dotfiles.git ~/.dotfiles.git || return
+
   pushd ~
-    mkdir -p .dotfiles.backup
-    mv $(dotfiles ls-tree --name-only HEAD) .dotfiles.backup 2>/dev/null
+    backup init
+    dotfiles ls-tree --full-tree -r --name-only HEAD | while read f; do
+      [[ -f $f ]] && backup add $f
+    done
+    backup config user.name backup
+    backup config user.email backup
+    backup commit -m backup
+    rm $(backup ls-tree -r --name-only HEAD)
+
     dotfiles config --local status.showUntrackedFiles no
     dotfiles checkout
     dotfiles submodule update --init --depth 1
