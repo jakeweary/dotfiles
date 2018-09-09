@@ -1,7 +1,7 @@
 ```sh
 # clone over ssh
-curl -sSL https://raw.github.com/thepheer/dotfiles/master/.dotfiles.bin/.dotfiles-install | bash -s ssh
+curl -sSL https://raw.github.com/thepheer/dotfiles/master/.dotfiles/.dotfiles-install | bash -s ssh
 
 # clone over https
-curl -sSL https://raw.github.com/thepheer/dotfiles/master/.dotfiles.bin/.dotfiles-install | bash
+curl -sSL https://raw.github.com/thepheer/dotfiles/master/.dotfiles/.dotfiles-install | bash
 ```
