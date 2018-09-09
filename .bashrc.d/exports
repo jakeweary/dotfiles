@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export PATH="$PATH:~/.bin"
+export PATH="$PATH:~/.dotfiles.bin:~/.bin"
 
 export HISTSIZE=
 export HISTFILESIZE=
