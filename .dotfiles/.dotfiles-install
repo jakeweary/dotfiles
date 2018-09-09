@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 backup() {
-  git --git-dir=$HOME/.dotfiles.backup --work-tree=$HOME "$@"
+  git --work-tree=$HOME --git-dir=$HOME/.dotfiles.backup "$@"
 }
 
 dotfiles() {
-  git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME "$@"
+  git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git "$@"
 }
 
 install() {
