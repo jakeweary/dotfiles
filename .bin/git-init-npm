@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+rm -rf .git
+npm version -f 0.0.0
+git init
+git add -A
+git commit -m "Initial commit"
+npm version minor
