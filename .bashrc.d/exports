@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export PATH="node_modules/.bin:~/.bin:~/.dotfiles:$PATH"
+export PATH="./node_modules/.bin:~/.bin:~/.dotfiles:$PATH"
 
 export HISTSIZE=
 export HISTFILESIZE=

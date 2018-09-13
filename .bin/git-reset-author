@@ -3,7 +3,7 @@
 NAME="${1:-$(git config --get user.name)}"
 EMAIL="${2:-$(git config --get user.email)}"
 
-git filter-branch -f --env-filter "
+git filter-branch -f --tag-name-filter cat --env-filter "
   GIT_AUTHOR_NAME='$NAME'
   GIT_AUTHOR_EMAIL='$EMAIL'
   GIT_COMMITTER_NAME='$NAME'

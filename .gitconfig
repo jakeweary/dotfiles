@@ -1,6 +1,6 @@
 [user]
-	name = Unknown
-	email = <>
+	name = foo
+	email = <5144598+bar@users.noreply.github.com>
 [core]
         # pager = less -+X
 [push]
@@ -19,4 +19,3 @@
 	log-diff = log --graph --decorate --patch
 	log-diff-words = log --graph --decorate --patch --color-words='\\w+|\\S'
 	diff-words = diff --color-words='\\w+|\\S'
-
