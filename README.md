@@ -1,7 +1,12 @@
 ```sh
-# clone over ssh
+# install over ssh
 curl -sSL https://raw.github.com/reinventing-wheels/dotfiles/master/.dotfiles/.dotfiles-install | bash -s ssh
 
-# clone over https
+# install over https
 curl -sSL https://raw.github.com/reinventing-wheels/dotfiles/master/.dotfiles/.dotfiles-install | bash
+
+# commands
+.dotfiles
+.dotfiles-sync
+.dotfiles-uninstall
 ```
