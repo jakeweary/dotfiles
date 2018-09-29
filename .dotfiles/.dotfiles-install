@@ -27,7 +27,7 @@ install() {
   popd
 }
 
-case $1 in
+[[ $- = *s* ]] && case $1 in
   ssh) install git@     : ;;
   *)   install https:// / ;;
 esac
