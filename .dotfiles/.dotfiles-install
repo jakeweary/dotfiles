@@ -9,7 +9,7 @@ dotfiles() {
 }
 
 install() {
-  git clone --bare $1github.com$2thepheer/dotfiles.git ~/.dotfiles.git || return
+  git clone --bare $1github.com$2reinventing-wheels/dotfiles.git ~/.dotfiles.git || return
 
   pushd ~
     backup init
