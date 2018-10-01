@@ -2,8 +2,8 @@
 
 [[ $- = *i* ]] || return
 
-shopt -pq login_shell || . /etc/profile
-#shopt -pq login_shell || for i in /etc/profile.d/*; do . $i; done
+shopt -pq login_shell || \. /etc/profile
+#shopt -pq login_shell || for i in /etc/profile.d/*; do \. $i; done
 
 shopt -s autocd
 shopt -s cdspell
@@ -16,7 +16,7 @@ shopt -s histappend
 shopt -s lithist
 shopt -s nocaseglob
 
-for i in ~/.bashrc.d/*; do . $i; done
+for i in ~/.bashrc.d/*; do \. $i; done
 
 ###
 
