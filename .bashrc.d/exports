@@ -9,7 +9,7 @@ export HISTCONTROL=ignoreboth
 export PS1='\[\e]0;\u@\h \w\a\]\n\[\e[34m\]\u@\h\[\e[0m\] \[\e[36m\]\w\[\e[0m\]\n\$ '
 export PROMPT_COMMAND='history -a'
 
-[[ -f /usr/share/git/completion/git-prompt.sh ]] && {
+[[ -z $(type -t __git_ps1) && -f /usr/share/git/completion/git-prompt.sh ]] && {
   \. /usr/share/git/completion/git-prompt.sh
 }
 
