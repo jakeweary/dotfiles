@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 rm -rf .git CHANGELOG.md
-npm version -f 0.0.0
+npm version -f --allow-same-version 0.0.0
 git init
 git add -A
 git commit -m 'feat: initial commit'
