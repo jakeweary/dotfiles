@@ -1,12 +1,10 @@
 [user]
 	name = foo
 	email = <5144598+bar@users.noreply.github.com>
-[core]
-        # pager = less -+X
 [push]
 	default = simple
 [pretty]
-	basic = %C(yellow)%h%C(reset) %s%C(auto)%d
+	basic = %C(yellow bold)%h%C(reset) %s%C(auto)%d
 	extended = %C(yellow bold)%h%C(reset) %s %C(dim)%cr by %an%C(auto)%d
 [alias]
 	dotfiles = !git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git
