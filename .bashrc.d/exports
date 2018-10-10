@@ -14,12 +14,12 @@ export PROMPT_COMMAND='history -a'
 }
 
 [[ -n $(type -t __git_ps1) ]] && {
+  export GIT_PS1_SHOWCOLORHINTS=1
   export GIT_PS1_SHOWDIRTYSTATE=1
   export GIT_PS1_SHOWSTASHSTATE=1
   export GIT_PS1_SHOWUNTRACKEDFILES=1
-  export GIT_PS1_SHOWUNTRACKEDFILES=1
   export GIT_PS1_SHOWUPSTREAM=auto
-  export GIT_PS1_SHOWCOLORHINTS=1
+  export GIT_PS1_DESCRIBE_STYLE=branch
   export PROMPT_COMMAND="$PROMPT_COMMAND;__git_ps1 '${PS1:0:-5}' '${PS1: -5}' ' %s'"
 }
 
