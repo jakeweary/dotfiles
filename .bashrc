@@ -26,3 +26,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=$PATH:/home/me/.git-semantic-commits:$PATH
+
+export PATH="/home/me/.deno/bin:$PATH"
+
