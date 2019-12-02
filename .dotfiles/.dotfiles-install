@@ -8,22 +8,26 @@ dotfiles() {
   git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git "$@"
 }
 
+conflicting-files() {
+  dotfiles ls-tree --full-tree -r --name-only HEAD | while read f; do
+    [[ -f $f ]] && echo $f
+  done
+}
+
 install() {
   git clone --bare $1github.com$2thepheer/dotfiles.git ~/.dotfiles.git || return
 
   pushd ~
     backup init
-    dotfiles ls-tree --full-tree -r --name-only HEAD | while read f; do
-      [[ -f $f ]] && backup add $f
-    done
     backup config user.name backup
     backup config user.email backup
+    backup add $(conflicting-files)
     backup commit -m backup
     rm $(backup ls-tree -r --name-only HEAD)
 
     dotfiles config --local status.showUntrackedFiles no
     dotfiles checkout
-    dotfiles submodule update --init --depth 1
+    dotfiles submodule update --init --depth 10
   popd
 }
 

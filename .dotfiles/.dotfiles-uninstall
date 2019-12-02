@@ -9,7 +9,7 @@ dotfiles() {
 }
 
 pushd ~
-  rm -rf $(dotfiles ls-tree -r --name-only HEAD)
+  rm -rf $(dotfiles ls-tree --name-only HEAD)
   backup reset --hard
   rm -rf .dotfiles.*
 popd
