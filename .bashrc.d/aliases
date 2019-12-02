@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-alias .='pwd'
-alias ..='cd ..'
+# alias .='pwd'
+# alias ..='cd ..'
 
 alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -Alh'
