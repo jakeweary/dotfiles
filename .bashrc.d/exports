@@ -5,9 +5,10 @@ export PATH="~/.bin:~/.dotfiles:$PATH"
 export HISTSIZE=
 export HISTFILESIZE=
 export HISTCONTROL=ignoreboth
-
-export PS1='\[\e]0;\w\a\]\n\[\e[34m\]\u@\h\[\e[0m\] \[\e[36m\]\W\[\e[0m\]\n\$ '
 export PROMPT_COMMAND='history -a'
+export PS1='\[\e]0;\w\a\]'\
+'\n\[\e[34m\]\u@\h\[\e[0m\] \[\e[36m\]\W\[\e[0m\]'\
+'\n\$ '
 
 [[ -z $(type -t __git_ps1) && -f /usr/share/git/completion/git-prompt.sh ]] && {
   \. /usr/share/git/completion/git-prompt.sh
