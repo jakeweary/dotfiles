@@ -14,3 +14,6 @@ alias egrep='grep -E'
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffplay='ffplay -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
+
+alias bench='command time -f "real %E, user %U, sys %S, amem %K, mmem %M"'
+alias code='code-insiders'
