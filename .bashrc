@@ -2,6 +2,8 @@
 
 [[ $- = *i* ]] || return
 
+stty -ixon
+
 shopt -pq login_shell || \. /etc/profile
 #shopt -pq login_shell || for i in /etc/profile.d/*; do \. $i; done
 
