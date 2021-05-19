@@ -18,4 +18,4 @@
 	log-diff-words = log --graph --decorate --patch --color-words='\\w+|\\S'
 	diff-words = diff --color-words='\\w+|\\S'
 [core]
-	editor = code-insiders --wait
+	editor = code --wait

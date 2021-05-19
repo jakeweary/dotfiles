@@ -31,3 +31,6 @@ export PATH=$PATH:/home/me/.git-semantic-commits:$PATH
 
 export DENO_INSTALL="/home/me/.local"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+[ -f "/home/me/.ghcup/env" ] && source "/home/me/.ghcup/env" # ghcup-env
+source "$HOME/.cargo/env"
