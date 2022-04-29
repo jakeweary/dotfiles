@@ -34,3 +34,5 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 [ -f "/home/me/.ghcup/env" ] && source "/home/me/.ghcup/env" # ghcup-env
 source "$HOME/.cargo/env"
+
+export PATH=$PATH:/usr/local/go/bin

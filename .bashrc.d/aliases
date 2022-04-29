@@ -16,4 +16,4 @@ alias ffplay='ffplay -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
 
 alias bench='command time -f "%E real, %U user, %S sys, %P cpu, %Mk mem"'
-alias ci='code-insiders'
+alias strip-ansi='sed "s/\x1b\[[0-9;]*[a-z]//gi"'
