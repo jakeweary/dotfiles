@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export PATH="~/.bin:~/.dotfiles:$PATH"
+export PATH="~/.bin:~/.local/bin:~/.dotfiles:$PATH"
 
 export PROMPT_DIRTRIM=3
 export HISTSIZE=
