@@ -4,3 +4,5 @@ mkcd() { mkdir -p "$@" && cd "$@"; }
 cpcd() { cp "$@" && cd "${!#}"; }
 mvcd() { mv "$@" && cd "${!#}"; }
 cdls() { cd "$@" && ls; }
+
+tsh() { ssh -t "$@" tmux new -A -s ssh; }
