@@ -6,3 +6,11 @@ mvcd() { mv "$@" && cd "${!#}"; }
 cdls() { cd "$@" && ls; }
 
 tsh() { ssh -t "$@" tmux new -A -s ssh; }
+
+zig-fmt2() {
+  zig fmt "$@"
+  for f in "$@"; do
+    unexpand --first-only -t 4 < "$f" | expand -i -t 2 > "$f~"
+    mv "$f~" "$f"
+  done
+}
