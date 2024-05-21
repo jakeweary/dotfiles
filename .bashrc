@@ -18,13 +18,20 @@ shopt -s histappend
 shopt -s lithist
 shopt -s nocaseglob
 
-for i in ~/.bashrc.d/*; do \. $i; done
+for i in ~/.bashrc.d/*; do \. "$i"; done
 
 ###
-. "$HOME/.cargo/env"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f "/home/me/.ghcup/env" ] && source "/home/me/.ghcup/env" # ghcup-env
+
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+
+. "$HOME/.cargo/env"
+
+export PATH=$PATH:/usr/local/go/bin
