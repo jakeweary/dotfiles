@@ -6,14 +6,14 @@ def esc(*colors):
 def unit(*colors):
   print('{} ● {}'.format(esc(*colors), esc()), end='')
 
-def pair(*colors):
-  for mode in range(2):
+def triple(*colors):
+  for mode in range(3):
     unit(mode, *colors)
 
 def line(bg):
-  pair(bg)
+  triple(bg)
   for fg in range(30, 38):
-    pair(fg, bg)
+    triple(fg, bg)
   print()
 
 def table():
